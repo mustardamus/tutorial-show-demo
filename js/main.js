@@ -57,60 +57,6 @@ $(document).ready(function() {
 
 /*resize the iframe when the window is resized
 $(document).ready(function() {
-  function refreshSettings() {
-    winWidth = $(window).width();
-    winHeight = $(window).height();
-    edgeSpace = 40;
-    iframeWidth = winWidth - edgeSpace * 2;
-    iframeHeight = winHeight - edgeSpace * 2;
-  }
-  
-  var winWidth, winHeight, edgeSpace, iframeWidth, iframeHeight;
-  refreshSettings();
-  
-  $('#demo').click(function() {
-    $('body').append('<div id="demoarea"><iframe src="'+$(this).attr('href')+'" width="'+iframeWidth+'" height="'+iframeHeight+'"></iframe><a href="#close" id="close"></a></div>');
-
-    $('#demoarea').css({
-      'position'            : 'fixed',
-      'top'                 : edgeSpace+'px',
-      'left'                : edgeSpace+'px',
-      'background'          : 'white',
-      'max-height'          : iframeHeight+'px',
-      'box-shadow'          : '0 0 '+edgeSpace+'px black',
-      '-moz-box-shadow'     : '0 0 '+edgeSpace+'px black',
-      '-webkit-box-shadow'  : '0 0 '+edgeSpace+'px black',
-    }).children('#close').css({
-      'position'            : 'absolute',
-      'top'                 : '-15px',
-      'left'                : '-15px',
-      'display'             : 'block',
-      'width'               : '30px',
-      'height'              : '30px',
-      'background'          : 'url(images/close.png)'
-    }).click(function() {
-      $(this).parent().remove();
-      return false;
-    });
-    
-    return false;
-  });
-  
-  $(window).resize(function() {
-    refreshSettings();
-
-    if($('#demoarea').length != 0) {
-      $('#demoarea iframe').css({
-        'width'   : iframeWidth+'px',
-        'height'  : iframeHeight+'px'
-      });
-    }
-  });
-});*/
-
-
-/*resize the iframe when the window is resized
-$(document).ready(function() {
   function refreshSettings() { //update the settings when calling this function
     winWidth = $(window).width();
     winHeight = $(window).height();
